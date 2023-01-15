@@ -8,6 +8,8 @@
   --color-OCEAN: #404bbf;
   --color-GREEN: #31d0aa;
   --color-LIGHT-SLAIGHT: #8e8f99;
+
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -88,12 +90,14 @@ p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-NAVY-BLUE);
+  transition: color var(--animation);
 }
 
 .logo-web {
   color: var(--color-IRIS);
 }
 
+.logo:hover,
 .logo:focus {
   color: var(--color-IRIS);
 }
@@ -117,6 +121,7 @@ p {
   color: var(--color-SLATE);
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color var(--animation);
 }
 
 .header-link:hover,
@@ -135,10 +140,12 @@ p {
   text-decoration: none;
   line-height: 1.5;
   color: var(--color-SLATE);
-}
+  transition: color var(--animation);
+  }
 
-.link:hover,
-.link:focus {
+
+.contact-link:hover,
+.contact-link:focus {
   color: var(--color-IRIS);
 }
 
@@ -183,6 +190,8 @@ p {
   border-radius: 4px;
   cursor: pointer;
   border: none;
+  
+  transition: background var(--animation), box-shadow var(--animation);
 }
 
 .button-hero:hover,
@@ -305,6 +314,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: var(--color-IRIS);
+  transition: background-color var(--animation);
 }
 
 .team-soc-link:hover,
@@ -346,6 +356,7 @@ p {
   justify-content: center;
   align-items: center;
   fill: var(--color-LIGHT-SLAIGHT);
+  transition: fill var(--animation), border var(--animation);
 }
 
 .customers-link:hover,
@@ -353,8 +364,6 @@ p {
   fill: var(--color-OCEAN);
   border: 1px solid var(--color-OCEAN);
 }
-
-
 
 /* ___________FOOTER__________ */
 
@@ -377,6 +386,7 @@ p {
   color: var(--color-CLOUD);
   text-transform: uppercase;
   margin-bottom: 16px;
+  transition: color var(--animation);
 }
 
 .logo-margin {
@@ -424,6 +434,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--animation);
 }
 
 .soc-media-link:hover,
@@ -457,6 +468,7 @@ p {
   border-radius: 4px;
   padding: 12px 24px;
   cursor: pointer;
+  transition: color var(--animation), background var(--animation), box-shadow var(--animation), border-radius var(--animation);
 }
 
 .button-filter:hover,
@@ -496,6 +508,7 @@ p {
 .gallery-link {
   display: block;
   text-decoration: none;
+  transition: box-shadow var(--animation);
 }
 
 .gallery-link:hover {
