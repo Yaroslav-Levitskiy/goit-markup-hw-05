@@ -554,7 +554,8 @@ p {
 }
 
 .gallery-link.overlay:hover {
-  transform: translateY(0);
+  transform: translateY(100%);
+  transition: transform var(--animation);
 
 }
 
@@ -576,8 +577,8 @@ p {
   padding-right: 32px;
   padding-top: 40px;
   padding-bottom: 164px;
-  transform: translateY(100%);
-  
+  transform: translateY(0%);
+  transition: transform var(--animation);
 }
 
 .project-wrapper {
