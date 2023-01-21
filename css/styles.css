@@ -114,6 +114,7 @@ p {
 }
 
 .header-link {
+  position: relative;
   display: block;
   text-decoration: none;
   font-weight: 500;
@@ -124,13 +125,35 @@ p {
   transition: color var(--animation);
 }
 
-.current::after {
+.header-link.current-studio {
+  color: var(--color-OCEAN);
+}
+
+.current-studio::after {
   content: "";
   position: absolute;
   width: 48px;
   height: 4px;
   left: 0px;
-  top: 48px;
+  bottom: 0;
+  padding-top: 4px;
+  color: var(--color-OCEAN);
+  background: var(--color-OCEAN);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.header-link.current-portfolio {
+  color: var(--color-OCEAN);
+}
+
+.current-portfolio::after {
+  content: "";
+  position: absolute;
+  width: 68px;
+  height: 4px;
+  left: 0px;
+  bottom: 0;
   padding-top: 4px;
   color: var(--color-OCEAN);
   background: var(--color-OCEAN);
@@ -530,21 +553,31 @@ p {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.overlay {
-  position: relative;
+.gallery-link.overlay:hover {
+  transform: translateY(0);
 
+}
+
+.thumb-gallery {
+  position: relative;
   overflow: hidden;
 }
 
-.image-hover-text {
-  position: relative;
+.overlay {
+  position: absolute;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-CLOUD);
   background: var(--color-IRIS);
   background-blend-mode: soft-light;
-  mix-blend-mode: normal;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  padding-bottom: 164px;
+  transform: translateY(100%);
+  
 }
 
 .project-wrapper {
